@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block content %}
 <main>
     <h1>My Receipts</h1>
@@ -15,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for receipt in show_receipts %}
+            {% for receipt in receipts %}
             <tr>
                 <td>{{ receipt.vendor }}</td>
                 <td>{{ receipt.total }}</td>
@@ -24,9 +23,10 @@
                 <td>{{ receipt.category }}</td>
                 <td>{{ receipt.account }}</td>
             </tr>
-            {% endfor %}
+            {% endfor %} 
         </tbody>
     </table>
 </main>
 
-{% endblock content %}
+{% endblock content %} 
+
