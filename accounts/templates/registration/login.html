@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <div>
+            <h1>Log In</h1>
+            <form method="post">
+                {% csrf_token %}
+                {% comment %} {{ form.as_p }} {% endcomment %}
+                <input type= "text" name="username">Username</input>
+                <input type= "password" name="password">Password</input>
+                <button type="Submit">Login</button>
+            </form>
+{% endblock content %}
